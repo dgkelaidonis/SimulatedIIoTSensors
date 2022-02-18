@@ -54,8 +54,8 @@ public class SensorsGwController {
 			if (dataType.equalsIgnoreCase("all")) {
 				return ResponseEntity.status(HttpStatus.OK)
 						.body(DataGenerator.generateAllInOnePackedData(
-								(numOfMachines != null) ? Integer.parseInt(numOfMachines) : null,
-								(numOfShopFloors != null) ? Integer.parseInt(numOfShopFloors) : null));
+								(numOfShopFloors != null) ? Integer.parseInt(numOfShopFloors) : null,
+								(numOfMachines != null) ? Integer.parseInt(numOfMachines) : null));
 			} else if (dataType.equalsIgnoreCase("equipment")) {
 				return ResponseEntity.status(HttpStatus.OK).body(DataGenerator.generateIndustryEquipmentData(
 						(numOfMachines != null) ? Integer.parseInt(numOfMachines) : null));
